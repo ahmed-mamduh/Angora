@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* SECTION =========== SHARED STYLES========== */
+:root {
+  --main-color: #f25454;
+  --secondary-color: #b0b0b0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+a {
+  font-size: 1rem !important;
+}
+
+/* SECTION =========== SHARED STYLES========== */
+
+/* SECTION ===============  NAV START============== */
+/* SECTION ===============  NAV END============== */
+
+.nav-social {
+  list-style-type: none;
+}
+.nav-social > li:hover i {
+  color: var(--main-color) !important;
+}
+
+.navbar {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: var(--main-color) !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.nav-item a:hover {
+  color: var(--main-color) !important;
+}
+
+/* SECTION ===============  HEADER START============== */
+
+.carousel-inner img {
+  height: 100vh;
+}
+.carousel-buttons {
+  z-index: 2;
+}
+.carousel-buttons button {
+  position: relative;
+  border-radius: 3px;
+  border-left: none !important;
+  border: 1px solid white;
+}
+.carousel-buttons :first-child {
+  border-bottom: 0;
+}
+.carousel-buttons button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+.carousel-buttons button:hover i {
+  color: var(--main-color) !important;
+}
+.carousel-buttons button:hover:before {
+  width: 100%;
+}
+
+#home h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.scroll-down {
+  z-index: 3;
+  top: 90%;
+  border: 1px solid white;
+}
+.scroll-down a {
+  color: white;
+}
+.scroll-down i {
+  animation: dropping 1.5s ease-in-out infinite;
+  font-size: 0.5rem;
+}
+@keyframes dropping {
+  from {
+    opacity: 0;
+    transform: translatey(-100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.setting-icon {
+  z-index: 3;
+  top: 20%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.9rem;
+}
+.setting-icon .fa-gears {
+  transform: rotate(60deg) translate(-35%, 70%);
+}
+/* SECTION ===============  HEADER END============== */
+/* SECTION ===============  ABOUT START============== */
+
+.first-h3 {
+  margin-bottom: 20px;
+  font-size: 6rem;
+  line-height: 38px;
+  font-weight: 700;
+  color: #f2f2f0;
+}
+.second-h3 {
+  font-size: 3rem;
+  color: #000;
+  position: relative;
+}
+.second-h3::after {
+  content: "";
+  width: 20%;
+  border: 1px solid #000000;
+  font-weight: 100;
+  position: absolute;
+  bottom: -15px;
+  margin: auto;
+  transition: all 0.5s;
+  left: 40%;
+}
+
+.section-title h2:hover::after {
+  scale: 2;
+}
+
+.about-disc {
+  color: #999;
+}
+
+.progress {
+  height: 5px;
+}
+
+.progress-header h3 {
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 30px;
+}
+.progress-header span {
+  float: right;
+}
+
+/* SECTION ===============  ABOUT END============== */
+/* SECTION ===============  TEAM STRAT============== */
+
+.team .about-disc {
+  width: 100% !;
+}
+
+.team .about-disc p {
+  font-size: 24px;
+}
+
+#team .images .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.5s all;
+}
+#team .images {
+  overflow: hidden;
+}
+#team .images img {
+  transition: 0.5s all;
+}
+#team .images:hover img {
+  transform: scale(1.2);
+  overflow: hidden;
+}
+
+#team .images .layer-text {
+  position: relative;
+  top: 100%;
+  transition: 0.5s 0.5s all;
+}
+
+#team .images :hover .layer-text {
+  top: 0%;
+}
+#team .images .layer-text:hover {
+  opacity: 1;
+}
+
+.contact-us {
+  background-color: var(--main-color) !important;
+  color: #fff;
+  margin: 10px 15px;
+  border-radius: 1px;
+}
+.contact-us:hover {
+  background-color: #fc7272 !important;
+  color: #fff;
+  border-radius: 1px;
+}
+.layerpic {
+  background-color: #f25454;
+  opacity: 0.7;
+  visibility: hidden;
+}
+.picture:hover .layerpic {
+  visibility: visible;
+}
+.layer-text a {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* SECTION ===============  TEAM END============== */
+/* SECTION ===============  SERVICES START============== */
+
+.services i {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.service-title h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.service-title:hover h2 {
+  color: var(--main-color);
+  transition: all 0.3s;
+}
+
+/* SECTION ===============  SERVICES END============== */
+/* SECTION ===============  CLIENTS START============== */
+
+#carouselExampleCaptions {
+  width: 300px;
+  height: 300px !important;
+  overflow: hidden;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* left: 50%; */
+}
+
+#carouselExampleCaptions img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#carouselExampleCaptions .carousel-caption {
+  position: absolute;
+  bottom: -100px;
+}
+
+.carousel-inner .carousel-caption {
+  position: absolute;
+  color: #000;
+}
+
+#carouselExampleCaptions {
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+/* SECTION ===============  CLIENTS END============== */
+/* SECTION ===============  conatct start============== */
+
+.get-answers > p {
+  line-height: 1px;
+}
+
+#contact .tag-line {
+  width: 50px;
+}
+
+#contact .tag-line:hover p {
+  color: var(--main-color);
+}
+
+.tag-line i {
+  color: var(--main-color);
+}
+
+.form_ input {
+  border-radius: 3px;
+  height: 50px;
+  transition: all 0.5s;
+  width: 100%;
+  border-color: #999;
+}
+.form_ input ::placeholder {
+  color: #f25454;
+}
+
+.form_ input:focus {
+  border: 2px solid var(--main-color);
+}
+
+.form_ textarea {
+  width: 100%;
+  height: 8rem;
+  border-color: #999;
+}
+.form_ a {
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.form_ a:hover {
+  background-color: #fc7272;
+  border-color: transparent;
+}
+
+.service-title p:hover a {
+  color: var(--main-color);
+}
+
+/* SECTION ===============  conatct END============== */
+/* SECTION ===============  FOOTER START============== */
+
+.footer_body {
+  background-image: url(../assets/images/dotted-map.png);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+a {
+  text-decoration: none;
+}
+.footer_ p,
+.footer_ a {
+  color: var(--secondary-color) !important;
+}
+
+.copy_right a {
+  text-decoration: none;
+  margin-right: 150px;
+  color: #fff !important;
+  transition: all 0.5s;
+}
+.copy_right:hover a {
+  color: var(--main-color) !important;
+}
+
+.e a {
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 50px;
+  width: 50%;
+}
+
+.e a:hover {
+  border-color: var(--main-color);
+  color: var(--main-color) !important;
+}
+
+.footer_icons i {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 1rem;
+  transition: all 0.5s;
+  text-decoration: none;
+  border-radius: 1px solid;
+}
+
+.footer_icons i:hover {
+  color: var(--main-color);
+}
+
+.main_footer_icon {
+  width: 75px;
+  height: 70px;
+}
+
+/* SECTION ===============  FOOTER END============== */
